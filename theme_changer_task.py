@@ -2,18 +2,23 @@ from configparser import ConfigParser
 import ctypes
 import datetime
 import pathlib
+import os
 import sys
 import winreg
 
 KEY_PATH = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize"
 
 def get_configuration():
+    # if just using 'config.ini' an error will be triggeres to we must get the absolute path
+    path = pathlib.Path(__file__)
+    root_dir = path.parent.absolute()
+    config_path = os.path.join(root_dir, "config.ini")
     # Open config.ini and get the desired settings.
     configure = ConfigParser()
-    configure.read('config.ini')
+    configure.read(config_path)
 
-    night_mode_time = configure.getint('Settings', 'NightModeTime')
-    light_mode_time = configure.getint('Settings', 'LightModeTime')
+    night_mode_time = configure.getint('Settings', 'nightmodetime')
+    light_mode_time = configure.getint('Settings', 'lightmodetime')
     image_path = configure.get('Settings', 'imagepath')
     return night_mode_time, light_mode_time, image_path
 
@@ -70,7 +75,7 @@ def change_theme(value):
     set_registry_value("SystemUsesLightTheme", value)
     # Set the appropiate wallpaper for the theme.
     wallpaper_name = get_filename()
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, f"{image_path}{wallpaper_name}" , 0)
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, f"{image_path}\{wallpaper_name}" , 0)
 
 if __name__ == "__main__":
     # Set variables from values in the config.ini file.

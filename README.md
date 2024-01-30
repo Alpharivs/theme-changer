@@ -14,14 +14,14 @@ Windows 11 automatic dark/light mode changer with GUI written in python.
 
 - Select a wallpaper for each theme 
 
-
+*Disclaimer: the script works by modifying two registry values, as a good habit you should always backup you registry before attempting any changes, it has been only tested locally as it's a bootleg personal project.*
 ## Why?
 
 I just wanted a lazy way to change themes in Windows because apparently it's to hard for such a small indie company to add such function and took is as an opportunity to practice some python.
 
 ## Requirements
 
-- Python installed in your system and the pillow module or just downloading the release version (only tested locally as it's a bootleg personal project)
+- Python installed in your system and the pillow module
 - 'Accent Colors' option in the Personalization > Colors section of the Windows Settings app should be set to automatic.
 
 <figure align="center">
@@ -31,7 +31,7 @@ I just wanted a lazy way to change themes in Windows because apparently it's to 
 
 ## Usage
 
-- Clone the repo and move it to the desired path.
+- Clone the repo and move it to the desired path, **both scripts should be in the same directory**.
 ```bash
 git clone https://github.com/Alpharivs/theme-changer.git
 ```

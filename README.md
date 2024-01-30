@@ -6,7 +6,7 @@
 
 ## About 
 <img src="assets/python.png"  align=right width="65" height="75" />
-Windows 11 automatic dark/light mode changer with gui written in python.
+Windows 11 automatic dark/light mode changer with GUI written in python.
 
 ## Features
 
@@ -26,7 +26,7 @@ I just wanted a lazy way to change themes in Windows because apparently it's to 
 
 <figure align="center">
     <img src="assets/Settings.png" style="max-width: 50%; height: auto;" />
-    <figcaption style="text-align:center">Mechanicus Wallpaper FTW</figcaption>
+    <figcaption style="text-align:center"></figcaption>
 </figure>
 
 ## Usage
@@ -43,11 +43,11 @@ python .\theme_changer.py
 
 <figure align="center">
     <img src="assets/main.png" />
-    <figcaption>Main Window</figcaption>
+    <figcaption></figcaption>
 </figure>
 <figure align="center">
     <img src="assets/time.png" />
-    <figcaption style="text-align:center">Time Selection Window</figcaption>
+    <figcaption style="text-align:center"></figcaption>
 </figure>
 
 
@@ -60,7 +60,7 @@ python .\theme_changer.py
 ```
 <figure align="center">
     <img src="assets/example_action.png" />
-    <figcaption style="text-align:center">Example action</figcaption>
+    <figcaption style="text-align:center"></figcaption>
 </figure>
 
 ```bash
@@ -75,7 +75,7 @@ trigger set to at logon and repeat 1 hour should work without issues, don't worr
 ```
 <figure align="center">
     <img src="assets/example_trigger.png" style="max-width: 40%; height: auto;"/>
-    <figcaption style="text-align:center">Example action</figcaption>
+    <figcaption style="text-align:center"></figcaption>
 </figure>
 
 

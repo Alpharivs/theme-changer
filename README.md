@@ -50,35 +50,28 @@ python .\theme_changer.py
     <figcaption style="text-align:center"></figcaption>
 </figure>
 
-
-
-
 - Create a Scheduled Task to run the script I might update the program to create it automatically but for the time being a task the following settings:
     - Actions:
 ```
 "start a program" action [path to your python.exe] argument [path to the theme_changer_task.py script]
+
+# You can get the path to your python.exe running python in the terminal and doing the following:
+>>> import sys
+>>> print(sys.executable)
 ```
 <figure align="center">
     <img src="assets/example_action.png" />
     <figcaption style="text-align:center"></figcaption>
 </figure>
 
-```bash
-# You can get the path to your python.exe running python in the terminal and doing the following:
->>> import sys
->>> print(sys.executable)
-```
-
 - Triggers:
 ```
-trigger set to at logon and repeat 1 hour should work without issues, don't worry if it's not time to change theme the app will exit without trying to change anything!
+trigger set to at log on and repeat 1 hour should work without issues, don't worry if it's not time to change theme the app will exit without trying to change anything!
 ```
 <figure align="center">
     <img src="assets/example_trigger.png" style="max-width: 40%; height: auto;"/>
     <figcaption style="text-align:center"></figcaption>
 </figure>
-
-
 
 <h2 align="center" > LVX-SIT </h2>
 <h3 align="center" > MMDCCLXXVII -- Ab urbe condita </h3>

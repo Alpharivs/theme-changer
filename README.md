@@ -10,9 +10,9 @@ Windows 11 automatic dark/light mode changer with GUI written in python.
 
 ## Features
 
-- GUI to select time of day in which you want light/dark mode to activate
+- GUI to select time of day in which you want light/dark mode to activate.
 
-- Select a wallpaper for each theme 
+- Select a wallpaper for each theme.
 
 *Disclaimer: the script works by modifying two registry values, as a good habit you should always backup you registry before attempting any changes, it has been only tested locally as it's a bootleg personal project.*
 ## Why?
@@ -21,7 +21,7 @@ I just wanted a lazy way to change themes in Windows because apparently it's to 
 
 ## Requirements
 
-- Python installed in your system and the pillow module
+- Python installed in your system and the pillow module.
 - 'Accent Colors' option in the Personalization > Colors section of the Windows Settings app should be set to automatic.
 
 <figure align="center">
@@ -50,15 +50,15 @@ python .\theme_changer.py
     <figcaption style="text-align:center"></figcaption>
 </figure>
 
-- Create a Scheduled Task to run the script I might update the program to create it automatically but for the time being a task the following settings:
+- Create a Scheduled Task to run the script I might update the program to create it automatically but for the time being a task with the following settings should do the trick:
     - Actions:
 ```
-"start a program" action [path to your pythonw.exe] argument 'theme_changer_task.py' Start in [path to theme_changer_task.py*] *sans trailing \ C:\scripts
+"start a program" action [path to your pythonw.exe] argument 'theme_changer_task.py' Start in [path to theme_changer_task.py*] *sans trailing '\' i.e: C:\scripts
 
-# You can get the path to your python.exe running python in the terminal and doing the following:
+# You can get the path to your pythonw.exe running 'python' in the terminal and doing the following:
 >>> import sys
 >>> print(sys.executable)
-The executable pythonw.exe should be inside the same directory
+The executable pythonw.exe should be inside the same directory as python.exe.
 ```
 <figure align="center">
     <img src="assets/action.png" />
@@ -67,14 +67,14 @@ The executable pythonw.exe should be inside the same directory
 
 - Triggers:
 ```
-A trigger set on schedule like the example below should do the trick, don't worry if it's not time to change theme the app will exit without trying to change anything!
+A trigger set on a schedule like in the example below should do the trick, don't worry if it's not time to change yet the app will exit without trying to change anything!
 ```
 <figure align="center">
     <img src="assets/schedule.png" style="max-width: 40%; height: auto;"/>
     <figcaption style="text-align:center"></figcaption>
 </figure>
 
-**Make Sure that Run only when user is logged is checked as it modifies the HKCU and it wouldn't work otherwise and also check Run task as soon as... in case you miss the schedule (it might not run immediately due to how WTS works)**
+**Make Sure that 'Run only when user is logged' is checked as it modifies the HKCU and it wont work otherwise and also check 'Run task as soon as...' to trigger the task in case you miss the scheduled time. (it might not run immediately due to how WTS works)**
 <figure align="center">
     <img src="assets/onlylogon.png" style="max-width: 40%; height: auto;"/>
     <figcaption style="text-align:center"></figcaption>

@@ -1,7 +1,7 @@
 <div >
     <img src="assets/owl.jpg" align="left" height="40px" width="40px"/>
     <img src="assets/medusa.png" align="right" height="40px" width="40px"/>
-    <h1 align="center" > Theme-Changer - Python automatic theme changer for Windows </h1>
+    <h1 align="center" > Theme Changer - Python automatic theme changer for Windows with GUI</h1>
 </div>
 
 ## About 

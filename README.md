@@ -74,7 +74,7 @@ A trigger set on a schedule like in the example below should do the trick, don't
     <figcaption style="text-align:center"></figcaption>
 </figure>
 
-**Make Sure that 'Run only when user is logged' is checked as it modifies the HKCU and it wont work otherwise and also check 'Run task as soon as...' to trigger the task in case you miss the scheduled time. (it might not run immediately due to how WTS works)**
+**Make Sure that 'Run only when user is logged' is checked as it modifies the HKCU and it wont work otherwise and also check 'Run task as soon as...' to trigger the task in case you miss the scheduled time. (it might not run immediately due to how WTS works, 10 minute delay per documentation)**
 <figure align="center">
     <img src="assets/onlylogon.png" style="max-width: 40%; height: auto;"/>
     <figcaption style="text-align:center"></figcaption>

@@ -40,6 +40,11 @@ def choose_file(mode):
             image_directory = os.getcwd() + '\images'
             extension = pathlib.Path(filename).suffix
 
+            # Check if a another wallpaper for the desired mode already exists
+            for file in os.listdir(image_directory):
+                if file.startswith(mode):
+                    os.remove(os.path.join(image_directory, file))
+
             shutil.copyfile(filename, fr'{image_directory}\{mode}{extension}')
             showinfo(title='Selected File', message=filename)
         else:
